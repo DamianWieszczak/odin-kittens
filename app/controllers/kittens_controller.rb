@@ -51,12 +51,12 @@ class KittensController < ApplicationController
   end
 
   private
-  
+
     def set_kitten
       @kitten = Kitten.find(params[:id])
     end
 
     def kitten_params
-      params.fetch(:kitten, {})
+      params.require(:kitten).permit(:name, :age, :cuteness, :softness)
     end
 end

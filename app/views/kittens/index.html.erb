@@ -4,10 +4,15 @@
 
 <div id="kittens">
   <% @kittens.each do |kitten| %>
-    <%= render kitten %>
-    <p>
+
+    <div>
+      <%= kitten.name %>
+      <%= kitten.age %>
+      <%= kitten.cuteness %>
+      <%= kitten.softness %>
       <%= link_to "Show this kitten", kitten %>
-    </p>
+    </div>
+
   <% end %>
 </div>
 

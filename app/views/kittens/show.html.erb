@@ -3,6 +3,10 @@
 <%= render @kitten %>
 
 <div>
+  <%= @kitten.name %>
+  <%= @kitten.age %>
+  <%= @kitten.cuteness %>
+  <%= @kitten.softness %> | 
   <%= link_to "Edit this kitten", edit_kitten_path(@kitten) %> |
   <%= link_to "Back to kittens", kittens_path %>
 
